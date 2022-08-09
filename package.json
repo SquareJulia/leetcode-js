@@ -1,0 +1,21 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "test.js",
+  "scripts": {
+    "start":"node test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SquareJulia/leetcode-js.git"
+  },
+  "author": "xiaosiyier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SquareJulia/leetcode-js/issues"
+  },
+  "homepage": "https://github.com/SquareJulia/leetcode-js#readme",
+  "type": "module"
+}
