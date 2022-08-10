@@ -1,4 +1,4 @@
-import TreeNode from "./TreeNode";
+import { TreeNode } from "./types";
 function maxPathSum(root: TreeNode | null): number {
   let res = root.val;
   const maxNotCrossWithRoot: (root: TreeNode | null) => number = (root) => {

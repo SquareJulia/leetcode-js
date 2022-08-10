@@ -1,4 +1,4 @@
-import TreeNode from "./TreeNode";
+import { TreeNode } from "./types";
 function diameterOfBinaryTree(root: TreeNode | null): number {
   let ans = 0;
   const dfs: (root: TreeNode | null) => number = (root) => {

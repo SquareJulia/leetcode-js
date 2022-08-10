@@ -1,4 +1,5 @@
-import TreeNode from "./TreeNode";
+import { TreeNode } from "./types";
+
 function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
   const dummy = new TreeNode();
   dummy.left = root;

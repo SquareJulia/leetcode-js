@@ -1,4 +1,4 @@
-import TreeNode from "./TreeNode";
+import { TreeNode } from "./types";
 function inorderTraversal(root: TreeNode | null): number[] {
   const res: number[] = [];
   const inorder = (root: TreeNode | null) => {
