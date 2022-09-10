@@ -1,0 +1,30 @@
+function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
+  //k>=1
+  const kthMin: (k: number, p1?: number, p2?: number) => number = (
+    k,
+    p1 = 0,
+    p2 = 0
+  ) => {
+    if (p1 === nums1.length || p2 === nums2.length) {
+      return p1 === nums1.length ? nums2[p2 + k - 1] : nums1[p1 + k - 1];
+    }
+    if (k === 1) {
+      return Math.min(nums1[p1], nums2[p2]);
+    }
+    const pp1 = Math.min(nums1.length - 1, p1 + Math.floor(k / 2) - 1),
+      pp2 = Math.min(nums2.length - 1, p2 + Math.floor(k / 2) - 1);
+    if (nums1[pp1] <= nums2[pp2]) {
+      k -= pp1 + 1 - p1;
+      p1 = pp1 + 1;
+    } else {
+      k -= pp2 + 1 - p2;
+      p2 = pp2 + 1;
+    }
+    return kthMin(k, p1, p2);
+  };
+  const len = nums1.length + nums2.length;
+  return (
+    (kthMin(Math.floor(len / 2) + 1) + kthMin(Math.floor((len - 1) / 2) + 1)) /
+    2
+  );
+}
